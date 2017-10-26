@@ -10,7 +10,7 @@ if defined?(Country)
     # add aliases for countries to their unofficial names
     Country::ALIASES = YAML.load_file(Country::ALIAS_FILE_PATH)['country'].freeze
     Country::ALPHA2 = Country.all.map(&:alpha2).freeze
-    ALIASES.each do |name, code|
+    Country::ALIASES.each do |name, code|
       Country[code].unofficial_names << name
     end
 
@@ -26,7 +26,7 @@ if defined?(Country)
     def self.try_find(name)
       (Country.find_country_by_name(name) ||
       deep_search(name) ||
-      Country[ALIASES[name]]) if name
+      Country[Country::ALIASES[name]]) if name
     end
 
     def self.deep_search(name)
