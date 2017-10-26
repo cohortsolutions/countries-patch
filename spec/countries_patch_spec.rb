@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'countries_patch' do
+describe 'countries-patch' do
   it "looks up a country's alpha-2 code through its name" do
     expect(Country.find_alpha2('Singapore')).to eq('SG')
     expect(Country.find_alpha2('United States of America')).to eq('US')

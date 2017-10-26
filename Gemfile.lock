@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    countries_patch (0.0.0)
+    countries-patch (0.0.0)
       countries (~> 2.0.8)
 
 GEM
@@ -37,7 +37,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  countries_patch!
+  countries-patch!
   rspec
 
 BUNDLED WITH

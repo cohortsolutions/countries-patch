@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = 'countries_patch'
+  s.name = 'countries-patch'
   s.version = '0.0.0'
   s.date = '2017-10-26'
   s.summary = 'A patch of the countries gem to add more aliases'
